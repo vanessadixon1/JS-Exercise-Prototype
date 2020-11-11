@@ -91,7 +91,7 @@ Car.prototype.fill = function(gallons) {
 
 Car.prototype.drive = function(drive) {
   this.odometer+=drive;
-  if(this.milesPerGallon > 0) {
+  if(this.milesPerGallon > 0 && this.tank > 0) {
     this.tank -= this.tank;
   } 
 }
@@ -117,10 +117,10 @@ Baby.prototype.play = function() {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Implicit - the this key word refers to whatever is to te left of the dot.
+  2. Explicit binding - the this key word refers to what we tell it to refer to using call call, bind, apply. 
+  3. new binding - this keyword refers to the instance of the function constructor.
+  4. Global binding it is bind to the window/console object.
 */
 
 
